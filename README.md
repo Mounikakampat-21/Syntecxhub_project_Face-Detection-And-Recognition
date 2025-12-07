@@ -48,3 +48,72 @@ FaceDetectionRecognition/
 │   └── trainer.yml
 └── screenshots/
     └── demo.png
+🚀 Getting Started
+1️⃣ Install Requirements
+pip install opencv-python opencv-contrib-python numpy
+
+2️⃣ Create Dataset
+
+Run the dataset creator:
+
+python create_dataset.py
+
+
+This will:
+
+Open your webcam
+
+Detect your face
+
+Save multiple images into dataset/your_name/
+
+Press q to stop capturing.
+
+🎓 Training the Model
+
+Train the LBPH face recognition model:
+
+python train_model.py
+
+
+This generates:
+
+trainer.yml (trained model)
+
+labels.pickle (label encodings)
+
+Both files will appear inside the trainer/ folder.
+
+▶️ Run Face Recognition
+python recognize.py
+
+
+The program will:
+
+Open webcam
+
+Detect and identify faces
+
+Display the name on the screen
+
+📸 Dataset Format
+
+Inside dataset/, create a folder for each person:
+
+dataset/
+├── monika/
+│   ├── 1.jpg
+│   ├── 2.jpg
+│   └── ...
+├── mounika/
+│   ├── 1.jpg
+│   └── ...
+
+
+Each folder name becomes the label for the face.
+
+📸 Demo (Optional)
+
+Add your output screenshot here:
+
+![Face Detection Demo](screenshots/demo.png)
